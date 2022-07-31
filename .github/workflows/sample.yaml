@@ -15,11 +15,11 @@ jobs:
       - name: dotnet info
         run: sudo dotnet --info
 
-      - name: dotnet restore 
+      - name: restore 
         run: dotnet restore
 
       - name: build 
         run: dotnet build -c Release --no-restore
 
-      - name: pwd
-        run: pwd
+      - name: publish 
+        run: dotnet publish -o /var/www/publish
