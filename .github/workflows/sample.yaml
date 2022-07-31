@@ -14,3 +14,9 @@ jobs:
 
       - name: dotnet info
         run: sudo dotnet --info
+
+      - name: restore
+        run: dotnet restore
+
+      - name: build 
+        run: dotnet build -c Release --no-restore
