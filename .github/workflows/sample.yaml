@@ -7,7 +7,7 @@ on:
 
 jobs:
   sample-dotnet-workflow:
-  runs-on: sample
+  runs-on: self-hosted
   steps:
     - name: checkout
       uses: actions/checkout@v3
