@@ -9,13 +9,13 @@ jobs:
   sample-dotnet:
     runs-on: sample
     steps:
-      - name: checkout
+      - name: checkout code
         uses: actions/checkout@v3
 
       - name: dotnet info
         run: sudo dotnet --info
 
-      - name: restore
+      - name: dotnet restore 
         run: dotnet restore
 
       - name: build 
