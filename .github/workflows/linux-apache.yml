@@ -20,3 +20,12 @@ jobs:
 
       - name: build 
         run: dotnet build -c Release --no-restore
+
+      - name: publish 
+        run: dotnet publish -o /var/www/publish
+
+      - name: copy publish to application
+        run: sudo cp -r /var/www/publish/* /var/www/deploy-publish
+
+      - name: restart nginx service
+        run: sudo systemctl restart sample.service
